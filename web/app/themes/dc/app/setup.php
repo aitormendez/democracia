@@ -6,6 +6,19 @@ use Roots\Sage\Container;
 use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
+use function \Sober\Intervention\intervention;
+
+/**
+ * https://github.com/soberwp/intervention
+ */
+if (function_exists('\Sober\Intervention\intervention')) {
+    // now you can use the function to call the required modules and their params
+    // intervention('remove-menu-items', 'plugins', 'all');
+    intervention('remove-customizer-items');
+    intervention('remove-emoji');
+    intervention('remove-howdy', 'Hola pringao');
+    intervention('remove-menu-items', ['posts', 'acf'], 'all');
+}
 
 /**
  * Theme assets
