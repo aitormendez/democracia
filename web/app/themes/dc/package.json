@@ -79,7 +79,7 @@
     "animejs": "^3.1.0",
     "bootstrap": "v4.3.1",
     "infinite-scroll": "^3.0.6",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "plyr": "^3.5.10",
     "popper.js": "^1.14.7"
   }
