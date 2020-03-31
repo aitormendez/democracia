@@ -158,6 +158,7 @@ let webpackConfig = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
       Popper: 'popper.js/dist/umd/popper.js',
+      anime: ['animejs', 'default'],
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: config.enabled.optimize,
