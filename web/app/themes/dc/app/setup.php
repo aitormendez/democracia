@@ -7,6 +7,7 @@ use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 use function \Sober\Intervention\intervention;
+use StoutLogic\AcfBuilder\FieldsBuilder;
 
 /**
  * https://github.com/soberwp/intervention
@@ -17,7 +18,7 @@ if (function_exists('\Sober\Intervention\intervention')) {
     intervention('remove-customizer-items');
     intervention('remove-emoji');
     intervention('remove-howdy', 'Hola pringao');
-    intervention('remove-menu-items', ['posts', 'acf'], 'all');
+    // intervention('remove-menu-items', ['posts', 'acf'], 'all');
 }
 
 /**
@@ -141,5 +142,18 @@ add_action('after_setup_theme', function () {
      */
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
+    });
+});
+
+/**
+ * Initialize ACF Builder
+ */
+add_action('init', function () {
+    collect(glob(config('theme.dir').'/app/fields/*.php'))->map(function ($field) {
+        return require_once($field);
+    })->map(function ($field) {
+        if ($field instanceof FieldsBuilder) {
+            acf_add_local_field_group($field->build());
+        }
     });
 });
