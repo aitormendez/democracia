@@ -18,6 +18,7 @@ if (function_exists('\Sober\Intervention\intervention')) {
     intervention('remove-customizer-items');
     intervention('remove-emoji');
     intervention('remove-howdy', 'Hola pringao');
+    intervention('remove-dashboard-items', ['welcome', 'activity', 'incoming-links', 'news']);
     // intervention('remove-menu-items', ['posts', 'acf'], 'all');
 }
 
