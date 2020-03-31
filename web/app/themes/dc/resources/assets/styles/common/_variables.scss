@@ -1,10 +1,26 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
 
 $theme-colors: (
   primary: #525ddc
 );
 
-/** Bootstrap navbar fix (https://git.io/fADqW) */
+/* Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
+
+$theme-colors: (
+  n: #181818,
+  b: #e2e2e2,
+);
+
+// Generate `.bg-*` color utilities
+@each $color, $value in $theme-colors {
+  @include bg-variant(".bg-#{$color}", $value);
+}
+
+/* fuentes */
+// $ff-serif: crimson_text, serif;
+$ff-sans: rubik, sans-serif;
+$font-family-base: $ff-sans;
