@@ -1,7 +1,58 @@
-.banner .nav li {
-  @extend .nav-item;
-}
+/* Z-INDEX
+ *
+ * .brand: 100
+ * .nav-primary: 200
+ * .logo: 0
+*/
 
-.banner .nav a {
-  @extend .nav-link;
+.banner {
+  .brand {
+    display: block;
+    background-color: theme-color("n");
+    margin-top: 0.4rem;
+    margin-left: 0.4rem;
+    padding: 0.2rem 0.4rem;
+    color: theme-color("b");
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    z-index: 100;
+  }
+
+  .nav-primary {
+    display: inline-block;
+    z-index: 200;
+  }
+
+  .nav {
+    li {
+      display: inline-block;
+      margin-left: 0.4rem;
+      font-weight: 700;
+
+      a {
+        display: block;
+        padding: 0.2rem 0.4rem;
+        background-color: theme-color("n");
+        color: theme-color("b");
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+
+      &:first-child {
+        margin-top: 0.3rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    position: fixed;
+
+    .logo {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+    }
+  }
 }
