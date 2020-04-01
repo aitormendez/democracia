@@ -24,6 +24,11 @@
     }
   }
 
+  .solapa {
+    position: fixed;
+    top: 0;
+  }
+
   .logo {
     width: 100%;
 
@@ -66,6 +71,12 @@
         font-weight: 200;
       }
     }
+  }
+
+  .hamburger {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
   }
 
   @include media-breakpoint-up(sm) {
