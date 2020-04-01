@@ -11,12 +11,17 @@
     background-color: theme-color("n");
     margin-top: 0.4rem;
     margin-left: 0.4rem;
-    padding: 0.2rem 0.4rem;
+    padding: 0.2rem 0.4rem 0.1rem 0.4rem;
     color: theme-color("b");
     text-transform: uppercase;
     letter-spacing: 0.03em;
     font-weight: 700;
     z-index: 100;
+    line-height: 1.2em;
+
+    &:hover {
+      color: theme-color("r");
+    }
   }
 
   .nav-primary {
@@ -32,15 +37,24 @@
 
       a {
         display: block;
-        padding: 0.2rem 0.4rem;
+        padding: 0.2rem 0.4rem 0.1rem 0.4rem;
         background-color: theme-color("n");
         color: theme-color("b");
         text-transform: uppercase;
         letter-spacing: 0.03em;
+        line-height: 1.2em;
+
+        &:hover {
+          color: theme-color("r");
+        }
       }
 
       &:first-child {
-        margin-top: 0.3rem;
+        margin-top: 0.4rem;
+      }
+
+      &.wpml-ls-item {
+        font-weight: 200;
       }
     }
   }
