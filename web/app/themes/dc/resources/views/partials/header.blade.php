@@ -1,5 +1,5 @@
 <header class="banner d-flex flex-column align-items-start">
-  <div class="logo bg-n d-flex align-items-center justify-content-center">
+  <div class="logo bg-n d-flex align-items-center justify-content-center p-5">
     @svg('logo')
   </div>
   <a class="brand mb-3" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
