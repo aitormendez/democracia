@@ -92,52 +92,59 @@ export default {
 
       $('.brand').hover(
         function(){
-          logoDemo.mostrar();
-           console.log('enter');
+          if (logoDemo.cambiando == false) {
+            logoDemo.mostrar(300)
+          }
         },
         function(){
-          logoDemo.esconder();
-          console.log('sal');
+          if (logoDemo.cambiando == false) {
+            logoDemo.esconder(300)
+          }
         }
      );
 
 
     let logoDemo = {
-      visible: true,
-      esconder() {
+      cambiando: false,
+      esconder(dur) {
         anime({
           targets: '.logo',
           opacity: 0,
-          complete: function() {
-            logo.addClass('d-none');
+          begin: function() {
+            this.cambiando = true;
           },
-          duration: 300,
+          complete: function() {
+            logo.addClass('d-sm-none');
+            this.cambiando = false;
+          },
+          duration: dur,
           easing: 'linear',
         });
         this.visible = false;
-        console.log('escondiendo');
       },
-      mostrar() {
+      mostrar(dur) {
         anime({
           targets: '.logo',
           opacity: 1,
           begin: function() {
-            logo.removeClass('d-none');
+            this.cambiando = true,
+            logo.removeClass('d-sm-none');
           },
-          duration: 300,
+          complete: function() {
+            this.cambiando = false;
+          },
+          duration: dur,
           easing: 'linear',
         });
-        this.visible = true;
-        console.log('mostrando');
       },
     }
-    console.log(logoDemo);
-    // console.log(brand);
-
-
 
     if (document.body.classList.contains('home')) {
-      console.log('home');
+      setTimeout(function(){
+        logoDemo.esconder(3000);
+      },3000);
+    } else {
+      logo.addClass('d-sm-none');
     }
 
 
