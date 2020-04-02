@@ -142,6 +142,7 @@ export default {
     if (document.body.classList.contains('home')) {
       setTimeout(function(){
         logoDemo.esconder(3000);
+        menu.plegar();
       },3000);
     } else {
       logo.addClass('d-sm-none');
