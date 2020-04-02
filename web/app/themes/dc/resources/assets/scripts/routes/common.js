@@ -4,6 +4,8 @@ export default {
   init() {
     // JavaScript to be fired on all pages
 
+    let hamb = $('.hamburger');
+
 
     // Menús desplegables
     // --------------------------------------------------------------------
@@ -49,10 +51,10 @@ export default {
           direction = (currY > lastY) ? 'down' : 'up';
         if (direction === 'down') {
           menu.plegar();
-          hamb.addClass('is-active');
+          hamb.removeClass('is-active');
         } else if (direction === 'up') {
           menu.desplegar();
-          hamb.removeClass('is-active');
+          hamb.addClass('is-active');
         }
 
         if (currY >= 1) {
@@ -62,25 +64,32 @@ export default {
         }
         lastY = currY;
       });
+    } else {
+      menu.plegar();
     } // ! viewport width
 
 
     // Hamburger
     // -------------------------------------
 
-    let hamb = $('.hamburger');
-
     hamb.click(function() {
       if (menu.desplegado == true) {
         menu.plegar();
-        $(this).addClass('is-active');
+        $(this).removeClass('is-active');
         console.log(menu.desplegado);
       } else if (menu.desplegado == false) {
         menu.desplegar();
-        $(this).removeClass('is-active');
+        $(this).addClass('is-active');
         console.log(menu.desplegado);
       }
     });
+
+    // En front-page
+
+    if (document.body.classList.contains('home')) {
+      console.log('home');
+    }
+
 
 
 
