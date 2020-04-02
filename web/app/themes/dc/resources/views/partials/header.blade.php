@@ -10,7 +10,7 @@
       @endif
     </nav>
   </div>
-  <button class="hamburger hamburger--arrow" type="button">
+  <button class="hamburger hamburger--arrow-r" type="button">
     <span class="hamburger-box">
       <span class="hamburger-inner"></span>
     </span>

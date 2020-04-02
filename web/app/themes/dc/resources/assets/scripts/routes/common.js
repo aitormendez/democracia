@@ -4,38 +4,83 @@ export default {
   init() {
     // JavaScript to be fired on all pages
 
-    $('.hamburger').click(function() {
-      $(this).toggleClass('is-active');
-      menu.plegar();
-    });
 
     // Menús desplegables
     // --------------------------------------------------------------------
 
     let menu = {
-      desplegado: false,
+      desplegado: true,
       plegar() {
-        let left;
-        if (this.desplegado == true) {
-          left = 0;
-          this.desplegado = false;
-        } else if (this.desplegado == false){
-          left = 200;
-          this.desplegado = true;
-        }
-        console.log(this.desplegado);
         anime({
           targets: '.nav-primary li',
-          translateX: left,
+          translateX: -200,
           delay: anime.stagger(30),
         });
         anime({
           targets: '.brand',
-          translateX: left,
+          translateX: -200,
         });
+        this.desplegado = false;
+      },
+      desplegar() {
+        anime({
+          targets: '.nav-primary li',
+          translateX: 0,
+          delay: anime.stagger(30),
+        });
+        anime({
+          targets: '.brand',
+          translateX: 0,
+        });
+        this.desplegado = true;
       },
     }
 
+    // Dirección scroll
+    let
+      w = $(window),
+      viewportWidth = w.width(),
+      lastY = w.scrollTop();
+
+    if (viewportWidth >= 768) {
+      w.scroll(function() {
+        let
+          currY = w.scrollTop(),
+          direction = (currY > lastY) ? 'down' : 'up';
+        if (direction === 'down') {
+          menu.plegar();
+          hamb.addClass('is-active');
+        } else if (direction === 'up') {
+          menu.desplegar();
+          hamb.removeClass('is-active');
+        }
+
+        if (currY >= 1) {
+          // banner.removeClass('full');
+        } else {
+          // banner.addClass('full');
+        }
+        lastY = currY;
+      });
+    } // ! viewport width
+
+
+    // Hamburger
+    // -------------------------------------
+
+    let hamb = $('.hamburger');
+
+    hamb.click(function() {
+      if (menu.desplegado == true) {
+        menu.plegar();
+        $(this).addClass('is-active');
+        console.log(menu.desplegado);
+      } else if (menu.desplegado == false) {
+        menu.desplegar();
+        $(this).removeClass('is-active');
+        console.log(menu.desplegado);
+      }
+    });
 
 
 
