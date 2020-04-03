@@ -15,7 +15,7 @@ export default {
     let menu = {
       desplegado: true,
       plegar() {
-        hamb.addClass('is-active');
+        hamb.removeClass('is-active');
         anime({
           targets: '.nav-primary li',
           translateX: -200,
@@ -32,7 +32,7 @@ export default {
         this.desplegado = false;
       },
       desplegar() {
-        hamb.removeClass('is-active');
+        hamb.addClass('is-active');
         anime({
           targets: '.nav-primary li',
           translateX: 0,
