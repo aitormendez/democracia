@@ -15,6 +15,7 @@ export default {
     let menu = {
       desplegado: true,
       plegar() {
+        hamb.addClass('is-active');
         anime({
           targets: '.nav-primary li',
           translateX: -200,
@@ -31,6 +32,7 @@ export default {
         this.desplegado = false;
       },
       desplegar() {
+        hamb.removeClass('is-active');
         anime({
           targets: '.nav-primary li',
           translateX: 0,
@@ -57,10 +59,8 @@ export default {
           direction = (currY > lastY) ? 'down' : 'up';
         if (direction === 'down') {
           menu.plegar();
-          hamb.removeClass('is-active');
         } else if (direction === 'up') {
           menu.desplegar();
-          hamb.addClass('is-active');
         }
         lastY = currY;
       });
@@ -75,11 +75,9 @@ export default {
     hamb.click(function() {
       if (menu.desplegado == true) {
         menu.plegar();
-        $(this).removeClass('is-active');
         console.log(menu.desplegado);
       } else if (menu.desplegado == false) {
         menu.desplegar();
-        $(this).addClass('is-active');
         console.log(menu.desplegado);
       }
     });
