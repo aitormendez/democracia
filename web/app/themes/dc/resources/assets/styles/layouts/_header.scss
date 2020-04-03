@@ -1,11 +1,13 @@
 /* Z-INDEX
- *
+ * .banner 1
  * .brand: 100
  * .nav-primary: 200
- * .logo: 0
+ * .logo: 50
 */
 
 .banner {
+  z-index: 1;
+
   .brand {
     display: inline-block;
     background-color: theme-color("n");
