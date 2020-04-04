@@ -7,13 +7,13 @@ export default {
 
     const player = new Plyr('#player', {captions: {
       active: true,
-      autoplay: true,
     }});
     window.player = player;
 
-    player.on('ready', () => {
+    setTimeout(function(){
       player.play();
-    })
+      console.log('play');
+    },3000);
 
   },
   finalize() {
