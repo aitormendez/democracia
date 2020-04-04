@@ -4,8 +4,6 @@ import Plyr from 'plyr';
 export default {
   init() {
     // JavaScript to be fired on all pages
-    // let brand = document.querySelector('.brand');
-    // brand.addEventListener('mouseenter', console.log('brand'));
 
     let hamb = $('.hamburger');
 
@@ -139,10 +137,12 @@ export default {
     }
 
     if (document.body.classList.contains('home')) {
-      setTimeout(function(){
-        logoDemo.esconder(3000);
-        menu.plegar();
-      },3000);
+      if (viewportWidth >= 768) {
+        setTimeout(function(){
+          logoDemo.esconder(3000);
+          menu.plegar();
+        },3000);
+      }
       const player = new Plyr('#player', {captions: {
         active: true,
       }});
