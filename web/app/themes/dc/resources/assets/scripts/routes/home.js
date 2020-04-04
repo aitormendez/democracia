@@ -11,6 +11,10 @@ export default {
     }});
     window.player = player;
 
+    player.on('ready', () => {
+      player.play();
+    })
+
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
