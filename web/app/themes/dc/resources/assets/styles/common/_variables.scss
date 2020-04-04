@@ -2,10 +2,6 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/mixins";
 
-$theme-colors: (
-  primary: #525ddc
-);
-
 /* Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
@@ -20,6 +16,8 @@ $theme-colors: (
   g4: #a7a7a7,
   g5: #cecece,
 );
+
+$plyr-color-main: theme-color("g1");
 
 // Generate `.bg-*` color utilities
 @each $color, $value in $theme-colors {
