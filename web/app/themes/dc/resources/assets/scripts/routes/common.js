@@ -153,6 +153,7 @@ export default {
       player.on('play', event => {
         menu.plegar()
       });
+      /* eslint-enable */
     } else {
       logo.addClass('d-sm-none');
     }
