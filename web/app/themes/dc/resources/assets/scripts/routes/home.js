@@ -10,11 +10,6 @@ export default {
     }});
     window.player = player;
 
-    setTimeout(function(){
-      player.play();
-      console.log('play');
-    },3000);
-
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
