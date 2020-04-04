@@ -1,4 +1,5 @@
 import anime from 'animejs';
+import Plyr from 'plyr';
 
 export default {
   init() {
@@ -142,6 +143,16 @@ export default {
         logoDemo.esconder(3000);
         menu.plegar();
       },3000);
+      const player = new Plyr('#player', {captions: {
+        active: true,
+      }});
+      /* eslint-disable no-unused-vars */
+      player.on('pause', event => {
+        menu.desplegar()
+      });
+      player.on('play', event => {
+        menu.plegar()
+      });
     } else {
       logo.addClass('d-sm-none');
     }
