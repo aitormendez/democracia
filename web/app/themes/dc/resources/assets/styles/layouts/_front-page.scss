@@ -12,6 +12,14 @@
         background-color: theme-color("n");
       }
     }
+
+    @media screen and (orientation: portrait) {
+      //  …
+    }
+
+    @media screen and (orientation: landscape) {
+      //  …
+    }
   }
 
   @include media-breakpoint-up("sm") {

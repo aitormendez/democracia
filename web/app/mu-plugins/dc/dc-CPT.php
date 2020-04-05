@@ -137,6 +137,23 @@ add_action( 'init', function() {
     ]
   );
 
+  // Project taxonomy
+  // --------------------------------------------------------------------------------
+
+  register_extended_taxonomy( 'project_format',
+  [
+    'project',
+  ],
+  [
+    'meta_box' => 'simple',
+    'hierarchical' => false,
+  ],
+  [
+    'singular' => __( 'Formato', 'sj-CPT' ),
+    'plural'   => __( 'Formatos', 'sj-CPT' ),
+  ]
+);
+
 
 
 }, 0 );
