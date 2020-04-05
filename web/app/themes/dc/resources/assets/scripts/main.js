@@ -34,8 +34,12 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 
+import {
+  faCaretRight,
+} from '@fortawesome/free-solid-svg-icons';
+
 var faArrowAltDown = {
-  prefix: 'fas',
+  prefix: 'fad',
   iconName: 'arrow-alt-down',
   icon: [
     512,
@@ -47,8 +51,8 @@ var faArrowAltDown = {
 }
 
 var faArrowAltRight = {
-  prefix: 'fas',
-  iconName: 'arrow-alt-down',
+  prefix: 'fad',
+  iconName: 'arrow-alt-right',
   icon: [
     512,
     512,
@@ -58,6 +62,6 @@ var faArrowAltRight = {
   ],
 }
 
-library.add(faFacebook, faTwitter, faArrowAltDown, faArrowAltRight);
+library.add(faFacebook, faTwitter, faArrowAltDown, faArrowAltRight, faCaretRight);
 
 dom.watch();

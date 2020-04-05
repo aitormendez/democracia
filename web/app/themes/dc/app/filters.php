@@ -106,3 +106,11 @@ add_filter('sage/display_sidebar', function ($display) {
 
     return $display;
 });
+
+/**
+ * Eliminar "Category:" etc. de achivos
+ * https://wordpress.stackexchange.com/a/203884/77722
+ */
+add_filter('get_the_archive_title', function ($title) {
+    return preg_replace('/^\w+: /', '', $title);
+});

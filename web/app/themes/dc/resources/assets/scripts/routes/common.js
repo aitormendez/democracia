@@ -5,7 +5,10 @@ export default {
   init() {
     // JavaScript to be fired on all pages
 
-    let hamb = $('.hamburger');
+    let
+      hamb = $('.hamburger'),
+      logo = $('.logo'),
+      solapa = $('.solapa');
 
 
     // Menús desplegables
@@ -21,6 +24,9 @@ export default {
           delay: anime.stagger(30),
           easing: 'easeInElastic(1, 1)',
           duration: 500,
+          complete: function() {
+            solapa.addClass('d-sm-none');
+          },
         });
         anime({
           targets: '.brand',
@@ -36,6 +42,9 @@ export default {
           targets: '.nav-primary li',
           translateX: 0,
           delay: anime.stagger(30),
+          begin: function() {
+            solapa.removeClass('d-sm-none');
+          },
         });
         anime({
           targets: '.brand',
@@ -83,9 +92,6 @@ export default {
 
     // Logo Democracia
     // ----------------
-
-     let
-      logo = $('.logo');
 
       $('.brand').hover(
         function(){
