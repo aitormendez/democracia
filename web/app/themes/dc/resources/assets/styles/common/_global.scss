@@ -11,7 +11,7 @@ a {
   transition: color $trans, background-color $trans;
 
   &:hover {
-    color: theme-color("principal");
+    color: theme-color("g3");
     text-decoration: none;
   }
 }

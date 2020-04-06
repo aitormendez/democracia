@@ -1,0 +1,15 @@
+.post-type-archive-project {
+  article {
+    header {
+      h2 {
+        font-size: 1rem;
+
+        .permalink,
+        button {
+          display: block;
+          width: 4rem;
+        }
+      }
+    }
+  }
+}
