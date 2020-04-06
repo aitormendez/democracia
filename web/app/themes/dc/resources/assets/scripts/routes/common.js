@@ -146,7 +146,6 @@ export default {
       if (viewportWidth >= 768) {
         setTimeout(function(){
           logoDemo.esconder(3000);
-          menu.plegar();
         },3000);
       }
       const player = new Plyr('#player', {captions: {
