@@ -4,6 +4,10 @@
       "./scripts/main.js",
       "./styles/main.scss"
     ],
+    "block-vimeo": [
+      "./styles/blocks/vimeo-block.scss",
+      "./scripts/blocks/vimeo-block.js"
+    ],
     "customizer": [
       "./scripts/customizer.js"
     ]
