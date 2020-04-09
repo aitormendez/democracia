@@ -26,6 +26,7 @@ $builder
             'display_format' => 'd/m/Y',
             'return_format' => 'd/m/Y',
             'first_day' => 1,
+			'wpml_cf_preferences' => 0,
         ]);
 
 return $builder;

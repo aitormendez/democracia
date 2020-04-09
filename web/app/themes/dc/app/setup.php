@@ -19,7 +19,7 @@ if (function_exists('\Sober\Intervention\intervention')) {
     intervention('remove-emoji');
     intervention('remove-howdy', 'Hola pringao');
     intervention('remove-dashboard-items', ['welcome', 'activity', 'incoming-links', 'news']);
-    intervention('remove-menu-items', ['posts', 'acf'], 'all');
+    // intervention('remove-menu-items', ['posts', 'acf'], 'all');
 }
 
 /**
@@ -85,6 +85,12 @@ add_action('after_setup_theme', function () {
      * @see resources/assets/styles/layouts/_tinymce.scss
      */
     add_editor_style(asset_path('styles/main.css'));
+
+    /**
+     * responsive-embeds
+     */
+    add_theme_support('responsive-embeds');
+
 }, 20);
 
 /**

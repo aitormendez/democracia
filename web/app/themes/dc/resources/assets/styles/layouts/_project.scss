@@ -1,0 +1,40 @@
+.single-project {
+  header {
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+
+  figcaption {
+    margin: 0;
+    padding: 0.5em;
+    background-color: theme-color("g2");
+    color: theme-color("b");
+    font-size: 0.8rem;
+  }
+
+  .entry-content > {
+    p,
+    ul,
+    ol,
+    blockquote,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      @extend .caja;
+    }
+
+    .wp-block-image,
+    .wp-block-gallery,
+    .wp-block-embed {
+      @extend .mb-5;
+
+      &:not(:first-child) {
+        @extend .mt-5;
+      }
+    }
+  }
+}

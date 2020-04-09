@@ -4,17 +4,9 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
-class ArchiveProject extends Controller
+class SingleProject extends Controller
 {
-    public static function anio()
-    {
-        $date_string = get_field('fecha_proyecto', false, false);
-        $date = new \DateTime($date_string);
-        $anio = $date->format('Y');
-        return $anio;
-    }
-
-    public static function formatos()
+    public function formatosSingleProject()
     {
         global $post;
         $output = '';
@@ -28,4 +20,8 @@ class ArchiveProject extends Controller
         return $output;
     }
 }
+
+
+
+
 
