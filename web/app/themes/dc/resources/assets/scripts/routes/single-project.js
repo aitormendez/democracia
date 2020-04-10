@@ -11,7 +11,6 @@ export default {
       mode: 'lg-slide',
       preload: 2,
       download: false,
-      thumbContHeight: 60,
       hideBarsDelay: 1000,
     });
 

@@ -18,5 +18,9 @@
     <p class="formatos mt-2">
       {!! $formatos_single_project !!}
     </p>
+  @if (is_singular('project'))
+    @field('ficha')
+  @endif
 
 </div>
+

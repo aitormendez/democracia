@@ -4,6 +4,30 @@
       font-size: 1.5rem;
       font-weight: 400;
     }
+
+    .meta {
+      font-size: 0.8rem;
+
+      .caja *:last-child {
+        margin-bottom: 0;
+      }
+
+      .fecha {
+        font-weight: 700;
+      }
+
+      button {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+
+        &:focus,
+        &:hover {
+          outline: none;
+          color: theme-color("r");
+        }
+      }
+    }
   }
 
   figcaption {
@@ -14,26 +38,28 @@
     font-size: 0.8rem;
   }
 
-  .entry-content > {
-    p,
-    ul,
-    ol,
-    blockquote,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      @extend .caja;
-    }
+  .entry-content {
+    & > {
+      p,
+      ul,
+      ol,
+      blockquote,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        @extend .caja;
+      }
 
-    .wp-block-image,
-    .wp-block-gallery,
-    .wp-block-embed {
-      @extend .mb-5;
+      .wp-block-image,
+      .wp-block-gallery,
+      .wp-block-embed {
+        @extend .mb-5;
 
-      &:not(:first-child) {
-        @extend .mt-5;
+        &:not(:first-child) {
+          @extend .mt-5;
+        }
       }
     }
   }
