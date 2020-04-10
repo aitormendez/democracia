@@ -16,6 +16,7 @@ export default {
 
     let menu = {
       desplegado: true,
+      cambiando: false,
       plegar() {
         hamb.removeClass('is-active');
         anime({
@@ -24,8 +25,12 @@ export default {
           delay: anime.stagger(30),
           easing: 'easeInElastic(1, 1)',
           duration: 500,
+          begin: function() {
+            menu.cambiando = true;
+          },
           complete: function() {
             solapa.addClass('d-sm-none');
+            menu.cambiando = false;
           },
         });
         anime({
@@ -44,6 +49,10 @@ export default {
           delay: anime.stagger(30),
           begin: function() {
             solapa.removeClass('d-sm-none');
+            menu.cambiando = true;
+          },
+          complete: function() {
+            menu.cambiando = false;
           },
         });
         anime({
@@ -53,6 +62,7 @@ export default {
         this.desplegado = true;
       },
     }
+
 
     // Dirección scroll
     let
@@ -65,9 +75,9 @@ export default {
         let
           currY = w.scrollTop(),
           direction = (currY > lastY) ? 'down' : 'up';
-        if (direction === 'down') {
+        if (direction === 'down' && menu.cambiando == false) {
           menu.plegar();
-        } else if (direction === 'up') {
+        } else if (direction === 'up' && menu.cambiando == false) {
           menu.desplegar();
         }
         lastY = currY;
@@ -86,7 +96,6 @@ export default {
         console.log(menu.desplegado);
       } else if (menu.desplegado == false) {
         menu.desplegar();
-        console.log(menu.desplegado);
       }
     });
 
