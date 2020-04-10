@@ -2,11 +2,6 @@
 import Plyr from 'plyr';
 console.log('vimeo');
 
-// new Plyr('.un-video', {
-//   captions: {active: true},
-// });
-
-
 const videos = $('.un-video');
 
 videos.each(function(){
