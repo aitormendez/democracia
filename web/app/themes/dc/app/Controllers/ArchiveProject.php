@@ -22,7 +22,7 @@ class ArchiveProject extends Controller
 
         foreach ($terms as $term) {
             $link = get_term_link( $term->slug, 'project_format' );
-            $output .= '<a class="d-inline-block mr-1 mb-1" href="' . $link . '">' . $term->name . '</a>';
+            $output .= '<a class="d-block mr-1 mb-1" href="' . $link . '">' . $term->name . '</a>';
         }
 
         return $output;

@@ -11,6 +11,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import singleProject from './routes/single-project';
 import postTypeArchiveProject from './routes/archive-project';
+import taxProjectFormat from './routes/tax-project_format';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -22,6 +23,7 @@ const routes = new Router({
   aboutUs,
   singleProject,
   postTypeArchiveProject,
+  taxProjectFormat,
 });
 
 // Load Events

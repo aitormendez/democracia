@@ -1,6 +1,7 @@
 /* stylelint-disable no-descending-specificity */
 
-.post-type-archive-project {
+.post-type-archive-project,
+.tax-project_format {
   article {
     background-color: theme-color("n");
     transition: background-color $trans;
@@ -65,6 +66,7 @@
 
     &.desplegado {
       background-color: theme-color("b");
+      font-size: 0.8rem;
 
       header {
         padding-top: 0.5em;
@@ -82,6 +84,10 @@
       button,
       .permalink {
         color: theme-color("n");
+      }
+
+      .fecha {
+        font-weight: 700;
       }
     }
 

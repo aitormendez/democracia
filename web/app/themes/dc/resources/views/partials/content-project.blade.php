@@ -21,10 +21,10 @@
         <div class="row">
           <div class="wrapper col-md-8 offset-md-2">
             <div class="meta my-3">
-              <p>
+              <p class="fecha">
                 {{ ArchiveProject::anio() }}
               </p>
-              <p class="formatos mb-0">
+              <p class="formatos">
                 {!! ArchiveProject::formatos() !!}
               </p>
               <div class="ficha">

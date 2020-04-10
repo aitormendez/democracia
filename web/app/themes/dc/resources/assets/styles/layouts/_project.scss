@@ -20,11 +20,12 @@
         border: none;
         background-color: transparent;
         padding: 0;
+        color: theme-color("r");
 
         &:focus,
         &:hover {
           outline: none;
-          color: theme-color("r");
+          color: theme-color("n");
         }
       }
     }
