@@ -66,7 +66,6 @@
 
     &.desplegado {
       background-color: theme-color("b");
-      font-size: 0.8rem;
 
       header {
         padding-top: 0.5em;
@@ -97,6 +96,7 @@
       .meta {
         .ficha p {
           margin-bottom: 0;
+          font-size: 0.8rem;
         }
       }
 

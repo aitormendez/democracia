@@ -63,14 +63,52 @@ add_action( 'init', function() {
   // CV cpt (cv)
   // --------------------------------------------------------------------------------
 
+  $supports_cv = [
+    'title',
+    'editor',
+  ];
+
+  $cols_cv = [
+    'exhibition' => [
+      'title'    => __('Exposición', 'dc-cpt'),
+      'taxonomy' => 'exhibition'
+    ],
+    'collective' => [
+      'title'    => __('Colectivo', 'dc-cpt'),
+      'taxonomy' => 'collective'
+    ],
+    'fecha' => [
+			'title'       => __('Fecha', 'dc-cpt'),
+			'post_field'  => 'post_date',
+      'date_format' => 'd/m/Y'
+    ],
+  ];
+
+  $filters_cv = [
+    'exhibition' => [
+      'title'    => __('Exposición', 'dc-cpt'),
+      'taxonomy' => 'exhibition'
+    ],
+    'collective' => [
+      'title'    => __('Colectivo', 'dc-cpt'),
+      'taxonomy' => 'collective'
+    ],
+    'fecha' => [
+			'title'       => __('Fecha', 'dc-cpt'),
+			'post_field'  => 'post_date',
+      'date_format' => 'd/m/Y'
+    ],
+  ];
+
+
   register_extended_post_type( 'cv',
     [
       'show_in_rest' => true,
       'show_in_feed' => true,
       // 'labels'       => $labels_story,
-      // 'admin_cols'   => $cols_story,
-      // 'admin_filters'=> $filters_story,
-      // 'supports'     => $supports_story,
+      'admin_cols'   => $cols_cv,
+      'admin_filters'=> $filters_cv,
+      'supports'     => $supports_cv,
     ],
     [
       'singular' => 'CV',
@@ -81,6 +119,29 @@ add_action( 'init', function() {
 
   // Proyectos cpt (project)
   // --------------------------------------------------------------------------------
+
+  $cols_project = [
+    'project_format' => [
+      'title'    => __('Formato', 'dc-cpt'),
+      'taxonomy' => 'project_format'
+    ],
+    'collective' => [
+      'title'    => __('Colectivo', 'dc-cpt'),
+      'taxonomy' => 'collective'
+    ],
+    'fecha_proyecto' => [
+			'title'       => 'Fecha proyecto',
+			'meta_key'    => 'fecha_proyecto',
+			'date_format' => 'd/m/Y'
+		],
+  ];
+
+  $filters_project = [
+    'project_format' => [
+      'title'    => __('Formato', 'dc-cpt'),
+      'taxonomy' => 'project_format'
+    ],
+  ];
 
   $labels_project = [
     'name'                  => _x( 'Proyectos', 'Post Type General Name', 'dc-CPT' ),
@@ -95,49 +156,54 @@ add_action( 'init', function() {
       'show_in_rest' => true,
       'show_in_feed' => true,
       'labels'       => $labels_project,
-      // 'admin_cols'   => $cols_story,
-      // 'admin_filters'=> $filters_story,
+      'admin_cols'   => $cols_project,
+      'admin_filters'=> $filters_project,
       // 'supports'     => $supports_story,
     ]
   );
 
-  // Crítica online cpt (critic)
+  // Enlace externo cpt (external)
   // --------------------------------------------------------------------------------
 
-  $labels_crítica = [
-    'name'                  => _x( 'Críticas', 'Post Type General Name', 'dc-CPT' ),
-  	'singular_name'         => _x( 'Crítica', 'Post Type Singular Name', 'dc-CPT' ),
-  	'menu_name'             => __( 'Críticas', 'dc-CPT' ),
-  	'name_admin_bar'        => __( 'Crítica', 'dc-CPT' ),
-  	'archives'              => __( 'Archivo de críticas', 'dc-CPT' ),
+  $labels_external = [
+    'name'                  => _x( 'Enlaces', 'Post Type General Name', 'dc-CPT' ),
+  	'singular_name'         => _x( 'Enlace', 'Post Type Singular Name', 'dc-CPT' ),
+  	'menu_name'             => __( 'Enlaces', 'dc-CPT' ),
+  	'name_admin_bar'        => __( 'Enlace', 'dc-CPT' ),
+  	'archives'              => __( 'Archivo de enlaces', 'dc-CPT' ),
   ];
 
-  register_extended_post_type( 'critic',
+  $supports_external = [
+    'title',
+    'editor',
+  ];
+
+  $cols_external = [
+    'external_type' => [
+      'title'    => __('Tipo de enlace', 'dc-cpt'),
+      'taxonomy' => 'external_type'
+    ],
+  ];
+
+  $filters_external = [
+    'external_type' => [
+      'title'    => __('Tipo de enlace', 'dc-cpt'),
+      'taxonomy' => 'external_type'
+    ],
+  ];
+
+  register_extended_post_type( 'external',
     [
       'show_in_rest' => true,
       'show_in_feed' => true,
-      'labels'       => $labels_crítica,
-      // 'admin_cols'   => $cols_story,
-      // 'admin_filters'=> $filters_story,
-      // 'supports'     => $supports_story,
+      'labels'       => $labels_external,
+      'admin_cols'   => $cols_external,
+      'admin_filters'=> $filters_external,
+      'supports'     => $supports_external,
     ]
   );
 
-  // TV cpt (tv)
-  // --------------------------------------------------------------------------------
-
-  register_extended_post_type( 'tv',
-    [
-      'show_in_rest' => true,
-      'show_in_feed' => true,
-      // 'labels'       => $labels_crítica,
-      // 'admin_cols'   => $cols_story,
-      // 'admin_filters'=> $filters_story,
-      // 'supports'     => $supports_story,
-    ]
-  );
-
-  // Project taxonomy
+  // Project format taxonomy
   // --------------------------------------------------------------------------------
 
   register_extended_taxonomy( 'project_format',
@@ -154,6 +220,57 @@ add_action( 'init', function() {
   ]
 );
 
+  // Colectivo taxonomy
+  // --------------------------------------------------------------------------------
+
+  register_extended_taxonomy( 'collective',
+  [
+    'cv',
+    'project',
+  ],
+  [
+    'meta_box' => 'radio',
+    'hierarchical' => false,
+  ],
+  [
+    'singular' => __( 'Colectivo', 'sj-CPT' ),
+    'plural'   => __( 'Colectivos', 'sj-CPT' ),
+  ]
+);
+
+  // Exhibition taxonomy
+  // --------------------------------------------------------------------------------
+
+  register_extended_taxonomy( 'exhibition',
+  [
+    'cv',
+  ],
+  [
+    'meta_box' => 'simple',
+    'hierarchical' => false,
+  ],
+  [
+    'singular' => __( 'Exposición', 'sj-CPT' ),
+    'plural'   => __( 'Exposiciones', 'sj-CPT' ),
+  ]
+);
+
+  // Tipo de enlace taxonomy
+  // --------------------------------------------------------------------------------
+
+  register_extended_taxonomy( 'external_type',
+  [
+    'external',
+  ],
+  [
+    'meta_box' => 'radio',
+    'hierarchical' => false,
+  ],
+  [
+    'singular' => __( 'Tipo de enlace', 'sj-CPT' ),
+    'plural'   => __( 'Tipos de enlace', 'sj-CPT' ),
+  ]
+);
 
 
 }, 0 );
