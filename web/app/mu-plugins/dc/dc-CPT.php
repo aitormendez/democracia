@@ -246,7 +246,7 @@ add_action( 'init', function() {
     'cv',
   ],
   [
-    'meta_box' => 'simple',
+    'meta_box' => 'radio',
     'hierarchical' => false,
   ],
   [
