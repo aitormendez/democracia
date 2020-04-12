@@ -12,7 +12,7 @@ $builder
 $builder
     ->addTab('Metadatos', ['placement' => 'left'])
         ->addWysiwyg('ficha', [
-            'label' => __('Ficha técnica', 'sage'),
+            'label' => __('Sheet', 'sage'),
             'instructions' => '',
             'tabs' => 'all',
             'toolbar' => 'basic',

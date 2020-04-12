@@ -91,6 +91,12 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('responsive-embeds');
 
+    /**
+     * load text domain
+     */
+    load_theme_textdomain('sage', get_template_directory() . '/lang');
+
+
 }, 20);
 
 /**

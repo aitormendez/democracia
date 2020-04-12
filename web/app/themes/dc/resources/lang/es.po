@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-12 19:07+0200\n"
+"PO-Revision-Date: 2020-04-12 19:11+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
+
+#: resources/functions.php:17
+msgid "Sage &rsaquo; Error"
+msgstr ""
+
+#: resources/functions.php:27
+msgid "You must be using PHP 7.1 or greater."
+msgstr ""
+
+#: resources/functions.php:27
+msgid "Invalid PHP version"
+msgstr ""
+
+#: resources/functions.php:34
+msgid "You must be using WordPress 4.7.0 or greater."
+msgstr ""
+
+#: resources/functions.php:34
+msgid "Invalid WordPress version"
+msgstr ""
+
+#: resources/functions.php:43
+msgid "You must run <code>composer install</code> from the Sage directory."
+msgstr ""
+
+#: resources/functions.php:44
+msgid "Autoloader not found."
+msgstr ""
+
+#: resources/functions.php:59
+#, php-format
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr ""
+
+#: app/filters.php:33
+msgid "Continued"
+msgstr "Leer más"
+
+#: app/setup.php:62
+msgid "Primary Navigation"
+msgstr "Navegación Principal"
+
+#: app/setup.php:107
+msgid "Primary"
+msgstr "Principal"
+
+#: app/setup.php:111
+msgid "Footer"
+msgstr "Pie"
+
+#: app/fields/project.php:15
+msgid "Sheet"
+msgstr "Ficha"
+
+#: app/fields/options.php:9
+msgid "Options"
+msgstr "Opciones"
+
+#: app/fields/options.php:27
+msgid "Image"
+msgstr "Imagen"
+
+#: app/fields/options.php:28
+msgid "Video"
+msgstr "Video"
+
+#: app/Controllers/App.php:20
+msgid "Latest Posts"
+msgstr "Últimas entradas"
+
+#: app/Controllers/App.php:26
+#, php-format
+msgid "Search Results for %s"
+msgstr "Resultados de búsqueda para %s"
+
+#: app/Controllers/App.php:29
+msgid "Not Found"
+msgstr "No encontrado"
+
+#: resources/views/index.blade.php:8 resources/views/search.blade.php:8
+msgid "Sorry, no results were found."
+msgstr "Lo sentimos, no se encontraron resultados."
+
+#: resources/views/404.blade.php:8
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "La página que estás intentando ver no existe."
+
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr "&larr; Comentarios anteriores"
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr "Comentarios posteriores &rarr;"
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: resources/views/partials/content-page.blade.php:2
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: resources/views/partials/entry-meta.blade.php:4
+#, python-format
+msgid "%2s %1s, %3s"
+msgstr "%1s de %2s de %3s"

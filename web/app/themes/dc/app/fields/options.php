@@ -6,7 +6,7 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 
 acf_add_options_page([
     'page_title' => get_bloginfo('name') . ' theme options',
-    'menu_title' => __('Opciones', 'sage'),
+    'menu_title' => __('Options', 'sage'),
     'menu_slug'  => 'theme-options',
     'capability' => 'edit_theme_options',
     'position'   => '999',
@@ -24,7 +24,7 @@ $options
         'label' => 'Tipo de contenido para la sección Hero',
         'instructions' => 'Indica el tipo de contenido de la sección Hero en portada',
         'choices' => [
-            'imagen' => __('Imagen', 'sage'),
+            'imagen' => __('Image', 'sage'),
             'video' => __('Video', 'sage'),
         ],
         'default_value' => 'video',
