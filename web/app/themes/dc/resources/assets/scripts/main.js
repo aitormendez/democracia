@@ -9,6 +9,7 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
+import singleStory from './routes/single-story';
 import singleProject from './routes/single-project';
 import postTypeArchiveProject from './routes/archive-project';
 import taxProjectFormat from './routes/tax-project_format';
@@ -24,6 +25,7 @@ const routes = new Router({
   singleProject,
   postTypeArchiveProject,
   taxProjectFormat,
+  singleStory,
 });
 
 // Load Events

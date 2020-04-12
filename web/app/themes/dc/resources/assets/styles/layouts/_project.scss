@@ -1,4 +1,5 @@
-.single-project {
+.single-project,
+.single-story {
   header {
     h1 {
       font-size: 1.5rem;
@@ -39,28 +40,26 @@
     font-size: 0.8rem;
   }
 
-  .entry-content {
-    & > {
-      p,
-      ul,
-      ol,
-      blockquote,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5 {
-        @extend .caja;
-      }
+  .entry-content .row > {
+    p,
+    ul,
+    ol,
+    blockquote,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      @extend .caja;
+    }
 
-      .wp-block-image,
-      .wp-block-gallery,
-      .wp-block-embed {
-        @extend .mb-5;
+    .wp-block-image,
+    .wp-block-gallery,
+    .wp-block-embed {
+      @extend .mb-5;
 
-        &:not(:first-child) {
-          @extend .mt-5;
-        }
+      &:not(:first-child) {
+        @extend .mt-5;
       }
     }
   }
