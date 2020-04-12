@@ -172,8 +172,59 @@ export default {
       logo.addClass('d-sm-none');
     }
 
+    // solapa buscar
+    // -------------------------------------
 
+    let
+      solapaBuscar = $('#buscar'),
+      cruz = $('.cruz'),
+      btnSolapaBusc = $('.boton-solapa-buscar'),
+      body = $('body');
 
+    let motorBuscar = {
+      desplegado: false,
+
+      desplegar() {
+        solapaBuscar.addClass('d-flex');
+        solapaBuscar.removeClass('d-none');
+        body.addClass('fijo');
+        anime({
+          targets: '#buscar',
+          opacity: 1,
+          duration: 1000,
+          easing: 'linear',
+        });
+        this.desplegado = true;
+      },
+      plegar() {
+        anime({
+          targets: '#buscar',
+          opacity: 0,
+          duration: 1000,
+          easing: 'linear',
+          complete: function() {
+            solapaBuscar.removeClass('d-flex');
+            solapaBuscar.addClass('d-none');
+            body.removeClass('fijo');
+          },
+        });
+        this.desplegado = false;
+      },
+    }
+
+    btnSolapaBusc.click(function(event) {
+      event.preventDefault();
+      if (motorBuscar.desplegado == false) {
+        motorBuscar.desplegar()
+      } else {
+        motorBuscar.plegar()
+      }
+    });
+
+    cruz.click(function(event) {
+      event.preventDefault();
+      motorBuscar.plegar()
+    });
 
 
 

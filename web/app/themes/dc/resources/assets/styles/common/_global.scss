@@ -6,6 +6,10 @@ html {
   }
 }
 
+body.fijo {
+  overflow: hidden;
+}
+
 a {
   color: theme-color("r");
   transition: color $trans, background-color $trans;

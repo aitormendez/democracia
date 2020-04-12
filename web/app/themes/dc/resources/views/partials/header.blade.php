@@ -16,4 +16,12 @@
     </span>
   </button>
 
+  <div id="buscar" class="vw-100 vh-100 bg-n fixed-top justify-content-center d-none" style="opacity: 0;">
+    <a role="button" class="cruz text-r position-absolute">
+      <i class="fad fa-cruz"></i>
+    </a>
+
+    {!! get_search_form(false) !!}
+  </div>
+
 </header>
