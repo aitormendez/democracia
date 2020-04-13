@@ -38,16 +38,16 @@
         width: 33%;
         order: 2;
       }
-    }
 
-    &.excerpt {
-      header {
-        width: 33%;
-      }
+      &.excerpt {
+        header {
+          width: 33%;
+        }
 
-      .entry-summary {
-        order: 1;
-        width: 33%;
+        .entry-summary {
+          order: 1;
+          width: 33%;
+        }
       }
     }
   }
