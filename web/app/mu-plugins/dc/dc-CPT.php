@@ -4,17 +4,14 @@
  * Description: CPT para dc
  * Author: Aitor Méndez
  * Author URI: https://e451.net
- * Texto Domain: dc-CPT
- * License: MIT License
- * https://github.com/johnbillion/extended-cpts
+ * Text Domain: dc-CPT
+ * Domain Path: /languages
  */
 
-namespace dc;
 
 add_action( 'init', function() {
 
-  // load_textodomain('dc-CPT', WPMU_PLUGIN_DIR . '/' .plugin_basename( dirname( __FILE__ ) ) . '/languages/dc-CPT-' . get_locale() . '.mo');
-
+  load_textdomain('dc-CPT', WPMU_PLUGIN_DIR . '/' .plugin_basename( dirname( __FILE__ ) ) . '/languages/' . get_locale() . '.mo');
 
   // Noticia cpt (story)
   // --------------------------------------------------------------------------------

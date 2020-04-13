@@ -13,10 +13,6 @@
         margin-bottom: 0;
       }
 
-      .fecha {
-        font-weight: 700;
-      }
-
       button {
         border: none;
         background-color: transparent;
@@ -64,3 +60,16 @@
     }
   }
 }
+
+.single-project {
+  .fecha {
+    font-weight: 700;
+  }
+}
+
+.single-story {
+  .entry-content {
+    padding-top: 2rem;
+  }
+}
+
