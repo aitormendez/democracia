@@ -4,12 +4,8 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
-class SingleStory extends Controller
+class ArchiveStory extends Controller
 {
 
+
 }
-
-
-
-
-
