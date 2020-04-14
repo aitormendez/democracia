@@ -1,6 +1,6 @@
 @php $class_except = (has_excerpt()) ? ' excerpt' : '' ; @endphp
 
-<a role="article" href="{{ get_permalink() }}" {{ post_class('d-block my-3' . $class_except) }}>
+<a role="article" href="{{ get_permalink() }}" {{ post_class('article d-block my-3' . $class_except) }}>
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-8 offset-lg-2 d-flex flex-wrap">

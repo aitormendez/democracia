@@ -8,6 +8,7 @@ import './autoload/**/*'
 import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
+import archive from './routes/archive';
 import aboutUs from './routes/about';
 import singleStory from './routes/single-story';
 import singleProject from './routes/single-project';
@@ -26,6 +27,7 @@ const routes = new Router({
   postTypeArchiveProject,
   taxProjectFormat,
   singleStory,
+  archive,
 });
 
 // Load Events

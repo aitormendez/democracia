@@ -170,3 +170,14 @@ add_action('init', function () {
         }
     });
 });
+
+
+/**
+* recopilar textos en página de autor
+*/
+add_action('pre_get_posts', function ($query) {
+    if ( ! is_admin() && is_post_type_archive( 'story' ) && $query->is_main_query() ) {
+        $query->set( 'posts_per_page', 2 );
+        return;
+    }
+});

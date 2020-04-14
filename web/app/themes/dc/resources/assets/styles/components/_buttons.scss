@@ -1,0 +1,15 @@
+.boton {
+  border: 1px solid theme-color("n");
+  background-color: transparent;
+  padding: 0.8em 1em 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: theme-color("n");
+  transition: border-color $trans, color $trans, background-color $trans;
+
+  &:hover {
+    border-color: theme-color("r");
+    color: theme-color("b");
+    background-color: theme-color("n");
+  }
+}
