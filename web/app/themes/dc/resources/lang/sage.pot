@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-13 10:17+0200\n"
+"POT-Creation-Date: 2020-04-14 16:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,7 +95,8 @@ msgstr ""
 msgid "Not Found"
 msgstr ""
 
-#: resources/views/index.blade.php:8 resources/views/search.blade.php:8
+#: resources/views/index.blade.php:8 resources/views/archive.blade.php:8
+#: resources/views/search.blade.php:8
 msgid "Sorry, no results were found."
 msgstr ""
 
@@ -115,10 +116,27 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
+#: resources/views/partials/loader.blade.php:4
+msgid "Loading"
+msgstr ""
+
+#: resources/views/partials/loader.blade.php:6
+msgid "End of content"
+msgstr ""
+
+#: resources/views/partials/loader.blade.php:7
+msgid "There is no more pages to load"
+msgstr ""
+
+#: resources/views/partials/loader.blade.php:11
+msgid "Load more"
+msgstr ""
+
 #: resources/views/partials/content-page.blade.php:2
 msgid "Pages:"
 msgstr ""
 
-#: resources/views/partials/entry-meta.blade.php:12
+#: resources/views/partials/entry-meta-story.blade.php:12
+#: resources/views/partials/entry-meta.blade.php:15
 msgid "%1$s %2$s, %3$s"
 msgstr ""

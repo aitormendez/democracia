@@ -1,4 +1,4 @@
-<div class="row py-3">
+<div class="row py-3 bg-b">
   <div class="col-12 page-load-status d-flex justify-content-center">
     <div class="infinite-scroll-request">
       <p>{{ __('Loading', 'sage') }}</p>
