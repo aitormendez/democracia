@@ -18,13 +18,13 @@ export default {
       debug: true,
     });
 
-    console.log('lc: ' + main.loadCount);
-
     function onPageLoad() {
       console.log(main.loadCount);
       console.log('main.loadCount');
-      if ( main.loadCount == 0 ) {
-        main.options.loadOnScroll = false;
+      if ( main.loadCount == 1 ) {
+        main.option({
+          loadOnScroll: false,
+        });
         buttonCont.removeClass('d-none');
         main.off( 'load', onPageLoad );
       }
