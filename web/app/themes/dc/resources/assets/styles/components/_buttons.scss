@@ -15,4 +15,18 @@
     box-shadow: none;
     outline: none;
   }
+
+  &.oscuro {
+    background-color: theme-color("n");
+    border-color: theme-color("b");
+    color: theme-color("b");
+
+    &:hover,
+    &:focus {
+      border-color: theme-color("r");
+      color: theme-color("r");
+      box-shadow: none;
+      outline: none;
+    }
+  }
 }
