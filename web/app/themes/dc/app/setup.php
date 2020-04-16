@@ -181,3 +181,16 @@ add_action('pre_get_posts', function ($query) {
         return;
     }
 });
+
+/**
+* Posts project
+*/
+add_action('pre_get_posts', function ($query) {
+    if ( ! is_admin() && is_post_type_archive( 'project' ) && $query->is_main_query() ) {
+        $query->set( 'posts_per_page', 20 );
+        $query->set('meta_key', 'fecha_proyecto' );
+        $query->set('orderby', 'meta_value_num');
+        $query->set('order', 'DESC');
+        return;
+    }
+});

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f521c844f1b29c0ac83207da08d9b3a",
+    "content-hash": "edc43ad7b1a95deb261084a910d68eb9",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -240,28 +240,31 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "7d610d50aae61ae7ed6675e58efeabdf279bb5e3"
+                "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/7d610d50aae61ae7ed6675e58efeabdf279bb5e3",
-                "reference": "7d610d50aae61ae7ed6675e58efeabdf279bb5e3",
+                "url": "https://api.github.com/repos/composer/installers/zipball/b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
+                "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0"
+                "composer-plugin-api": "^1.0 || ^2.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
                 "shama/baton": "*"
             },
             "require-dev": {
-                "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "^4.8.36"
+                "composer/composer": "1.6.* || 2.0.*@dev",
+                "composer/semver": "1.0.* || 2.0.*@dev",
+                "phpunit/phpunit": "^4.8.36",
+                "sebastian/comparator": "^1.2.4",
+                "symfony/process": "^2.3"
             },
             "type": "composer-plugin",
             "extra": {
@@ -360,7 +363,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2020-02-07T10:39:20+00:00"
+            "time": "2020-04-07T06:57:05+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1042,16 +1045,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v4.1.3",
+            "version": "v4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "88f7acc95150bca002a498899f8b52f318e444c2"
+                "reference": "feb6dad5ae24b1380827aee1629b730080fde500"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/88f7acc95150bca002a498899f8b52f318e444c2",
-                "reference": "88f7acc95150bca002a498899f8b52f318e444c2",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/feb6dad5ae24b1380827aee1629b730080fde500",
+                "reference": "feb6dad5ae24b1380827aee1629b730080fde500",
                 "shasum": ""
             },
             "require": {
@@ -1102,7 +1105,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2020-03-27T23:37:15+00:00"
+            "time": "2020-04-12T15:20:09+00:00"
         },
         {
             "name": "wp-sync-db/wp-sync-db-media-files",
@@ -1133,15 +1136,15 @@
         },
         {
             "name": "wpackagist-plugin/cookie-notice",
-            "version": "1.2.51",
+            "version": "1.3.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/cookie-notice/",
-                "reference": "tags/1.2.51"
+                "reference": "tags/1.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/cookie-notice.1.2.51.zip"
+                "url": "https://downloads.wordpress.org/plugin/cookie-notice.1.3.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1169,15 +1172,15 @@
         },
         {
             "name": "wpackagist-plugin/easy-table-of-contents",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/easy-table-of-contents/",
-                "reference": "tags/2.0.8"
+                "reference": "tags/2.0.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/easy-table-of-contents.2.0.8.zip"
+                "url": "https://downloads.wordpress.org/plugin/easy-table-of-contents.2.0.9.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1202,24 +1205,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/easy-wp-smtp/"
-        },
-        {
-            "name": "wpackagist-plugin/query-monitor",
-            "version": "3.5.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/query-monitor/",
-                "reference": "tags/3.5.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.5.2.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/query-monitor/"
         },
         {
             "name": "wpackagist-plugin/remove-query-strings-from-static-resources",
@@ -1609,6 +1594,42 @@
                 "standards"
             ],
             "time": "2020-01-30T22:20:29+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/fakerpress",
+            "version": "0.5.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/fakerpress/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/fakerpress.zip?timestamp=1573346196"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/fakerpress/"
+        },
+        {
+            "name": "wpackagist-plugin/query-monitor",
+            "version": "3.5.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/query-monitor/",
+                "reference": "tags/3.5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.5.2.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/query-monitor/"
         }
     ],
     "aliases": [],

@@ -1,4 +1,4 @@
-<article>
+<article class="article">
   <header id="heading-{{ get_the_ID() }}">
     <div class="container-fluid">
       <div class="row px-sm-0">
