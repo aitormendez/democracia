@@ -1,0 +1,24 @@
+.page-template-edicion {
+  .article {
+    margin-bottom: 4px;
+    background-color: theme-color("b");
+    color: theme-color("n");
+
+    h2 {
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+
+    .thumb {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+    }
+  }
+}
