@@ -27,19 +27,32 @@
 <div class="container-fluid">
   <div class="row infinite-scroll-container">
     @posts
-      <a href="{{ get_permalink() }}" class="article col-sm-6 col-md-4 col-lg-3">
-        @if (has_post_thumbnail())
-          <div class="thumb">
+      <a href="{{ get_permalink() }}" class="article col-sm-6 col-md-10 offset-md-2 d-md-flex justify-content-between">
+        <div class="flecha d-none d-md-block flex-grow-1 flex-shrink-1">
+          <i class="fal fa-arrow-right"></i>
+        </div>
+
+        <div class="thumb order-md-2 flex-grow-0 flex-shrink-0">
+          @if (has_post_thumbnail())
             @thumbnail('large')
-          </div>
-        @endif
-        <h2 class="entry-title my-3">@title</h2>
+          @endif
+        </div>
+
+        <div class="cont pr-md-4">
+          <h2 class="entry-title my-3">@title</h2>
+          @if (has_excerpt())
+            <div class="entry-summary">
+              @excerpt
+            </div>
+          @endif
+        </div>
       </a>
     @endposts
   </div>
+  @include('partials.loader')
 </div>
 
-@include('partials.loader')
+
 
 <nav class="nav-links">
   <div class="next-link">

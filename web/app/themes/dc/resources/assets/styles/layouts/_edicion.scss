@@ -4,9 +4,13 @@
     background-color: theme-color("b");
     color: theme-color("n");
 
+    .flecha {
+      font-size: 3rem;
+    }
+
     h2 {
-      font-weight: 400;
-      font-size: 1.2rem;
+      font-weight: 700;
+      font-size: 1rem;
     }
 
     .thumb {
@@ -19,6 +23,16 @@
     &:hover,
     &:focus {
       background-color: #fff;
+    }
+
+    @include media-breakpoint-up(md) {
+      .thumb {
+        width: 30%;
+      }
+
+      .cont {
+        width: 50%;
+      }
     }
   }
 }
