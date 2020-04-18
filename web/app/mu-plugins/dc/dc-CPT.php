@@ -266,6 +266,7 @@ add_action( 'init', function() {
   [
     'singular' => __( 'Tipo de enlace', 'sj-CPT' ),
     'plural'   => __( 'Tipos de enlace', 'sj-CPT' ),
+    'slug'     => 'link-type',
   ]
 );
 
