@@ -75,6 +75,16 @@
       &.wpml-ls-item {
         font-weight: 200;
       }
+
+      &.current-menu-item {
+        a {
+          background-color: theme-color("r");
+
+          &:hover {
+            background-color: theme-color("n");
+          }
+        }
+      }
     }
   }
 
