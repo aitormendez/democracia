@@ -119,6 +119,7 @@
     "aitormendez/acfml": "1.4.0",
     "wpackagist-plugin/wp-optimize": "*",
     "wpackagist-plugin/easy-wp-smtp": "*",
+    "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
     "stoutlogic/acf-builder": "^1.9",
     "soberwp/intervention": "^1.2",
     "wpackagist-plugin/disable-comments": "^1.10"
