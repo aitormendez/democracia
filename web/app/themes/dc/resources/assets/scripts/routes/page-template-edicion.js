@@ -3,8 +3,6 @@ var InfiniteScroll = require('infinite-scroll');
 export default {
   init() {
 
-    console.log('kjhkhkhkjh')
-
     // infinite-scroll
     // -----------------------------------------------
 

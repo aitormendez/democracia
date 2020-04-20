@@ -100,8 +100,8 @@ add_action( 'init', function() {
 
   register_extended_post_type( 'cv',
     [
-      'show_in_rest' => true,
-      'show_in_feed' => true,
+      'show_in_rest' => false,
+      'show_in_feed' => false,
       // 'labels'       => $labels_story,
       'admin_cols'   => $cols_cv,
       'admin_filters'=> $filters_cv,
@@ -180,12 +180,20 @@ add_action( 'init', function() {
       'title'    => __('Tipo de enlace', 'dc-cpt'),
       'taxonomy' => 'external_type'
     ],
+    'external_lang' => [
+      'title'    => __('Idioma del enlace', 'dc-cpt'),
+      'taxonomy' => 'external_lang'
+    ],
   ];
 
   $filters_external = [
     'external_type' => [
       'title'    => __('Tipo de enlace', 'dc-cpt'),
       'taxonomy' => 'external_type'
+    ],
+    'external_lang' => [
+      'title'    => __('Idioma del enlace', 'dc-cpt'),
+      'taxonomy' => 'external_lang'
     ],
   ];
 
@@ -267,6 +275,25 @@ add_action( 'init', function() {
     'singular' => __( 'Tipo de enlace', 'sj-CPT' ),
     'plural'   => __( 'Tipos de enlace', 'sj-CPT' ),
     'slug'     => 'link-type',
+  ]
+);
+
+
+  // Idioma del enlace taxonomy
+  // --------------------------------------------------------------------------------
+
+  register_extended_taxonomy( 'external_lang',
+  [
+    'external',
+  ],
+  [
+    'meta_box' => 'simple',
+    'hierarchical' => false,
+  ],
+  [
+    'singular' => __( 'Idioma del enlace', 'sj-CPT' ),
+    'plural'   => __( 'Idiomas del enlace', 'sj-CPT' ),
+    'slug'     => 'link-lang',
   ]
 );
 

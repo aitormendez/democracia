@@ -183,6 +183,16 @@ add_action('pre_get_posts', function ($query) {
 });
 
 /**
+* Cargar todos los posts en tax external_type
+*/
+add_action('pre_get_posts', function ($query) {
+    if ( ! is_admin() && is_tax( 'external_type' ) && $query->is_main_query() ) {
+        $query->set( 'nopaging', true );
+        return;
+    }
+});
+
+/**
 * Posts project
 */
 add_action('pre_get_posts', function ($query) {
@@ -199,9 +209,6 @@ add_action('pre_get_posts', function ($query) {
                 'operator' => 'NOT IN',
             ],
         ],);
-
-
-
         return;
     }
 });
