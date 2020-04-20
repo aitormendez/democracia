@@ -26,6 +26,7 @@ export default {
       if ( main.loadCount == 1 ) {
         main.options.loadOnScroll = false;
         buttonCont.removeClass('d-none');
+        buttonCont.addClass('d-flex');
         main.off( 'load', onPageLoad );
       }
     }

@@ -1,12 +1,12 @@
 {{--
-  Title: Vimeo video
-  Description: Incrusta un video desde Vimeo
+  Title: Plyr
+  Description: Incrusta un video con Plyr
   Category: embed
-  Icon: dashicons-video-alt3
-  Keywords: video vimeo
+  Icon: controls-play
+  Keywords: video vimeo youtube
   Mode: edit
   Align: center
-  PostTypes: project
+  PostTypes: project external
   SupportsAlign: false
   SupportsMode: false
   SupportsMultiple: true
@@ -14,7 +14,6 @@
   EnqueueScript: scripts/block-vimeo.js
 --}}
 
-
 <div class="contenedor w-100 my-4 {{ $block['classes'] }}">
-	<div class="un-video" data-plyr-provider="vimeo" data-plyr-embed-id="{{ get_field('vimeo_id') }}"></div>
+	<div class="un-video" otra-cosa="{{ get_field('video_provider') }}" data-plyr-provider="{{ get_field('video_provider') }}" data-plyr-embed-id="{{ get_field('vimeo_id') }}"></div>
 </div>

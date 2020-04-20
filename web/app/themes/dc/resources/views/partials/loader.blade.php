@@ -7,7 +7,7 @@
     <p class="infinite-scroll-error" style="display: none">{{ __('There is no more pages to load', 'sage') }}</p>
   </div>
 
-  <div class="col-12 button-container d-none d-flex justify-content-center">
+  <div class="col-12 button-container d-none justify-content-center">
     <button class="view-more-button boton">{{ __('Load more', 'sage') }}</button>
   </div>
 </div>

@@ -9,7 +9,9 @@
   @endwhile
 </div>
 
-@include('partials.loader')
+<div class="container-fluid">
+  @include('partials.loader')
+</div>
 
   {!! get_the_posts_navigation() !!}
 @endsection

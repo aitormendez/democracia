@@ -173,6 +173,7 @@ add_action( 'init', function() {
   $supports_external = [
     'title',
     'editor',
+    'thumbnail',
   ];
 
   $cols_external = [

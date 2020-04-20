@@ -6,7 +6,10 @@
     @endif
 
   </header>
-  <div class="entry-summary">
-    @php the_excerpt() @endphp
-  </div>
+  @if (!is_tax('external_type', 'tv'))
+    <div class="entry-summary">
+      @php the_excerpt() @endphp
+    </div>
+  @endif
+
 </article>
