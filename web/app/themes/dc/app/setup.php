@@ -197,16 +197,32 @@ add_action('pre_get_posts', function ($query) {
 */
 add_action('pre_get_posts', function ($query) {
     if ( ! is_admin() && is_post_type_archive( 'project' ) && $query->is_main_query() ) {
-        $query->set( 'posts_per_page', 20 );
-        // $query->set('meta_key', 'fecha_proyecto' );
-        // $query->set('orderby', 'meta_value_num');
-        // $query->set('order', 'DESC');
+        $query->set('posts_per_page', 20);
         $query->set('tax_query', [
             [
                 'taxonomy' => 'project_format',
                 'field'    => 'slug',
                 'terms'    => ['edition', 'edicion', 'comisariado', 'curatorship'],
                 'operator' => 'NOT IN',
+            ],
+        ],);
+        return;
+    }
+});
+
+
+/**
+* Posts enlaces (external)
+*/
+
+add_action('pre_get_posts', function ($query) {
+    if ( ! is_admin() && is_post_type_archive( 'external' ) && $query->is_main_query() ) {
+        $query->set('posts_per_page', 15);
+        $query->set('tax_query', [
+            [
+                'taxonomy' => 'external_type',
+                'field'    => 'slug',
+                'terms'    => ['generico'],
             ],
         ],);
         return;

@@ -106,6 +106,7 @@ add_action( 'init', function() {
       'admin_cols'   => $cols_cv,
       'admin_filters'=> $filters_cv,
       'supports'     => $supports_cv,
+      'exclude_from_search' => true,
     ],
     [
       'singular' => 'CV',
