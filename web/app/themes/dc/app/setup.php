@@ -199,11 +199,17 @@ add_action('pre_get_posts', function ($query) {
     if ( ! is_admin() && is_post_type_archive( 'project' ) && $query->is_main_query() ) {
         $query->set('posts_per_page', 20);
         $query->set('tax_query', [
+            'relation' => 'AND',
             [
                 'taxonomy' => 'project_format',
                 'field'    => 'slug',
                 'terms'    => ['edition', 'edicion', 'comisariado', 'curatorship'],
                 'operator' => 'NOT IN',
+            ],
+            [
+                'taxonomy' => 'collective',
+                'field'    => 'slug',
+                'terms'    => ['democracia'],
             ],
         ],);
         return;
@@ -223,6 +229,32 @@ add_action('pre_get_posts', function ($query) {
                 'taxonomy' => 'external_type',
                 'field'    => 'slug',
                 'terms'    => ['generico'],
+            ],
+        ],);
+        return;
+    }
+});
+
+
+/**
+* Posts cv (cv)
+*/
+
+add_action('pre_get_posts', function ($query) {
+    if ( ! is_admin() && is_post_type_archive( 'cv' ) && $query->is_main_query() ) {
+        $query->set( 'nopaging', true );
+        $query->set('tax_query', [
+            'relation' => 'AND',
+            [
+              'taxonomy' => 'exhibition',
+              'field'    => 'slug',
+              'terms'    => 'bibliografia',
+              'operator' => 'NOT IN',
+            ],
+            [
+                'taxonomy' => 'collective',
+                'field'    => 'slug',
+                'terms'    => 'democracia',
             ],
         ],);
         return;

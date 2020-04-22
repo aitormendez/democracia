@@ -1,0 +1,40 @@
+.post-type-archive-cv {
+  .page-header {
+    margin-bottom: 4rem;
+  }
+
+  .anio {
+    margin-top: 2rem;
+    border-bottom: 2px solid theme-color("n");
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3,
+  h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+  }
+
+  .epi {
+    border-bottom: 1px dotted theme-color("n");
+  }
+
+  .epi-biblio {
+    margin-top: 2rem;
+    border-bottom: 2px solid theme-color("n");
+  }
+
+  ul {
+    list-style-type: none;
+
+    h4,
+    p {
+      margin-bottom: 0;
+      font-size: 0.8rem;
+    }
+  }
+}

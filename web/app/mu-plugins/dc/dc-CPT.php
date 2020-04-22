@@ -100,7 +100,7 @@ add_action( 'init', function() {
 
   register_extended_post_type( 'cv',
     [
-      'show_in_rest' => false,
+      'show_in_rest' => true,
       'show_in_feed' => false,
       // 'labels'       => $labels_story,
       'admin_cols'   => $cols_cv,
@@ -124,7 +124,7 @@ add_action( 'init', function() {
       'taxonomy' => 'project_format'
     ],
     'collective' => [
-      'title'    => __('Colectivo', 'dc-cpt'),
+      'title'    => __('Collective', 'dc-cpt'),
       'taxonomy' => 'collective'
     ],
     'fecha_proyecto' => [
@@ -138,6 +138,10 @@ add_action( 'init', function() {
     'project_format' => [
       'title'    => __('Formato', 'dc-cpt'),
       'taxonomy' => 'project_format'
+    ],
+    'collective' => [
+      'title'    => __('Colectivo', 'dc-cpt'),
+      'taxonomy' => 'collective'
     ],
   ];
 
@@ -222,8 +226,8 @@ add_action( 'init', function() {
     'hierarchical' => false,
   ],
   [
-    'singular' => __( 'Formato', 'sj-CPT' ),
-    'plural'   => __( 'Formatos', 'sj-CPT' ),
+    'singular' => __( 'Formato', 'dc-cpt' ),
+    'plural'   => __( 'Formatos', 'dc-cpt' ),
   ]
 );
 
@@ -231,73 +235,73 @@ add_action( 'init', function() {
   // --------------------------------------------------------------------------------
 
   register_extended_taxonomy( 'collective',
-  [
-    'cv',
-    'project',
-  ],
-  [
-    'meta_box' => 'radio',
-    'hierarchical' => false,
-  ],
-  [
-    'singular' => __( 'Colectivo', 'sj-CPT' ),
-    'plural'   => __( 'Colectivos', 'sj-CPT' ),
-  ]
-);
+    [
+      'cv',
+      'project',
+    ],
+    [
+      'meta_box' => 'radio',
+      'hierarchical' => false,
+    ],
+    [
+      'singular' => __( 'Colectivo', 'dc-cpt' ),
+      'plural'   => __( 'Colectivos', 'dc-cpt' ),
+    ]
+  );
 
   // Exhibition taxonomy
   // --------------------------------------------------------------------------------
 
   register_extended_taxonomy( 'exhibition',
-  [
-    'cv',
-  ],
-  [
-    'meta_box' => 'radio',
-    'hierarchical' => false,
-  ],
-  [
-    'singular' => __( 'Exposición', 'sj-CPT' ),
-    'plural'   => __( 'Exposiciones', 'sj-CPT' ),
-  ]
-);
+    [
+      'cv',
+    ],
+    [
+      'meta_box' => 'radio',
+      'hierarchical' => false,
+    ],
+    [
+      'singular' => __( 'Exposición', 'dc-cpt' ),
+      'plural'   => __( 'Exposiciones', 'dc-cpt' ),
+    ]
+  );
 
   // Tipo de enlace taxonomy
   // --------------------------------------------------------------------------------
 
   register_extended_taxonomy( 'external_type',
-  [
-    'external',
-  ],
-  [
-    'meta_box' => 'radio',
-    'hierarchical' => false,
-  ],
-  [
-    'singular' => __( 'Tipo de enlace', 'sj-CPT' ),
-    'plural'   => __( 'Tipos de enlace', 'sj-CPT' ),
-    'slug'     => 'link-type',
-  ]
-);
+    [
+      'external',
+    ],
+    [
+      'meta_box' => 'radio',
+      'hierarchical' => false,
+    ],
+    [
+      'singular' => __( 'Tipo de enlace', 'dc-cpt' ),
+      'plural'   => __( 'Tipos de enlace', 'dc-cpt' ),
+      'slug'     => 'link-type',
+    ]
+  );
 
 
   // Idioma del enlace taxonomy
   // --------------------------------------------------------------------------------
 
   register_extended_taxonomy( 'external_lang',
-  [
-    'external',
-  ],
-  [
-    'meta_box' => 'simple',
-    'hierarchical' => false,
-  ],
-  [
-    'singular' => __( 'Idioma del enlace', 'sj-CPT' ),
-    'plural'   => __( 'Idiomas del enlace', 'sj-CPT' ),
-    'slug'     => 'link-lang',
-  ]
-);
+    [
+      'external',
+    ],
+    [
+      'meta_box' => 'simple',
+      'hierarchical' => false,
+    ],
+    [
+      'singular' => __( 'Idioma del enlace', 'dc-cpt' ),
+      'plural'   => __( 'Idiomas del enlace', 'dc-cpt' ),
+      'slug'     => 'link-lang',
+    ]
+  );
 
 
 }, 0 );
