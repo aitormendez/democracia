@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-14 16:20+0200\n"
+"POT-Creation-Date: 2020-04-22 17:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,6 +66,10 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
+#: app/fields/block-vimeo.php:14
+msgid "Video provider"
+msgstr ""
+
 #: app/fields/project.php:15
 msgid "Sheet"
 msgstr ""
@@ -86,22 +90,33 @@ msgstr ""
 msgid "Latest Posts"
 msgstr ""
 
-#: app/Controllers/App.php:26
+#: app/Controllers/App.php:29
 #, php-format
 msgid "Search Results for %s"
 msgstr ""
 
-#: app/Controllers/App.php:29
+#: app/Controllers/App.php:32
 msgid "Not Found"
 msgstr ""
 
-#: resources/views/index.blade.php:8 resources/views/archive.blade.php:8
-#: resources/views/search.blade.php:8
+#: resources/views/index.blade.php:8 resources/views/search.blade.php:8
 msgid "Sorry, no results were found."
 msgstr ""
 
 #: resources/views/404.blade.php:8
 msgid "Sorry, but the page you were trying to view does not exist."
+msgstr ""
+
+#: resources/views/archive-cv.blade.php:53
+msgid "Solo Shows"
+msgstr ""
+
+#: resources/views/archive-cv.blade.php:92
+msgid "Group Shows"
+msgstr ""
+
+#: resources/views/archive-cv.blade.php:131
+msgid "Bibliography"
 msgstr ""
 
 #: resources/views/partials/comments.blade.php:21

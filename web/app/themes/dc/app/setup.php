@@ -242,13 +242,15 @@ add_action('pre_get_posts', function ($query) {
 
 add_action('pre_get_posts', function ($query) {
     if ( ! is_admin() && is_post_type_archive( 'cv' ) && $query->is_main_query() ) {
+        $t = get_term_by('slug', 'bibliografia', 'exhibition');
+
         $query->set( 'nopaging', true );
         $query->set('tax_query', [
             'relation' => 'AND',
             [
               'taxonomy' => 'exhibition',
-              'field'    => 'slug',
-              'terms'    => 'bibliografia',
+              'field'    => 'id',
+              'terms'    => $t->term_id,
               'operator' => 'NOT IN',
             ],
             [

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-14 16:20+0200\n"
-"PO-Revision-Date: 2020-04-14 16:21+0200\n"
+"POT-Creation-Date: 2020-04-22 17:25+0200\n"
+"PO-Revision-Date: 2020-04-22 17:27+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -67,6 +67,10 @@ msgstr "Principal"
 msgid "Footer"
 msgstr "Pie"
 
+#: app/fields/block-vimeo.php:14
+msgid "Video provider"
+msgstr "Proveedor de vídeo"
+
 #: app/fields/project.php:15
 msgid "Sheet"
 msgstr "Ficha"
@@ -87,23 +91,34 @@ msgstr "Video"
 msgid "Latest Posts"
 msgstr "Últimas entradas"
 
-#: app/Controllers/App.php:26
+#: app/Controllers/App.php:29
 #, php-format
 msgid "Search Results for %s"
 msgstr "Resultados de búsqueda para %s"
 
-#: app/Controllers/App.php:29
+#: app/Controllers/App.php:32
 msgid "Not Found"
 msgstr "No encontrado"
 
-#: resources/views/index.blade.php:8 resources/views/archive.blade.php:8
-#: resources/views/search.blade.php:8
+#: resources/views/index.blade.php:8 resources/views/search.blade.php:8
 msgid "Sorry, no results were found."
 msgstr "Lo sentimos, no se encontraron resultados."
 
 #: resources/views/404.blade.php:8
 msgid "Sorry, but the page you were trying to view does not exist."
 msgstr "La página que estás intentando ver no existe."
+
+#: resources/views/archive-cv.blade.php:53
+msgid "Solo Shows"
+msgstr "Exposiciones individuales"
+
+#: resources/views/archive-cv.blade.php:92
+msgid "Group Shows"
+msgstr "Exposiciones colectivas"
+
+#: resources/views/archive-cv.blade.php:131
+msgid "Bibliography"
+msgstr "Bibliografía"
 
 #: resources/views/partials/comments.blade.php:21
 msgid "&larr; Older comments"
