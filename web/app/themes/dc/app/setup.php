@@ -223,7 +223,7 @@ add_action('pre_get_posts', function ($query) {
 
 add_action('pre_get_posts', function ($query) {
     if ( ! is_admin() && is_post_type_archive( 'external' ) && $query->is_main_query() ) {
-        $query->set('posts_per_page', 15);
+        $query->set('nopaging', true);
         $query->set('tax_query', [
             [
                 'taxonomy' => 'external_type',
@@ -249,7 +249,7 @@ add_action('pre_get_posts', function ($query) {
             'relation' => 'AND',
             [
               'taxonomy' => 'exhibition',
-              'field'    => 'id',
+              'field'    => 'term_id',
               'terms'    => $t->term_id,
               'operator' => 'NOT IN',
             ],

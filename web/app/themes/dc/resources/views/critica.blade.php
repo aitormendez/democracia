@@ -18,6 +18,11 @@
       'nopaging' => true,
       'tax_query' => [
         [
+          'taxonomy' => 'external_type',
+          'field'    => 'slug',
+          'terms'    => 'critica',
+        ],
+        [
           'taxonomy' => 'external_lang',
           'field'    => 'slug',
           'terms'    => $term,

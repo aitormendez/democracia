@@ -19,7 +19,7 @@ class App extends Controller
             }
             return __('Latest Posts', 'sage');
         }
-        if (is_archive('cv')) {
+        if (is_post_type_archive('cv')) {
             return 'CV';
         }
         if (is_archive()) {
