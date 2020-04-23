@@ -15,14 +15,6 @@
 @section('content')
   @include('partials.page-header')
 
-  @php
-      $t = get_term_by('slug', 'bibliografia', 'exhibition');
-      $term = apply_filters( 'wpml_object_id', $t->term_id, 'exhibition' );
-      var_dump($term);
-      var_dump($t);
-  @endphp
-
-
     <section class="exhibit">
       @foreach ($anios as $anio)
         <div class="anio container-fluid">
