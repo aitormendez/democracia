@@ -13,11 +13,11 @@
     </div>
   @endif
   @if ($hero_tipo == 'imagen')
-    <div class="portrait">
-
+    <div class="portrait justify-content-center align-items-center">
+      {!! $img_vert_portada  !!}
     </div>
-    <div class="landscape">
-
+    <div class="landscape justify-content-center align-items-center">
+      {!! $img_horiz_portada  !!}
     </div>
   @endif
 </section>

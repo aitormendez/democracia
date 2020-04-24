@@ -52,6 +52,12 @@ $options
         'instructions' => 'Introduce el identificador del vídeo en Vimeo (algo así: 152570988)',
     ])
         ->conditional('tipo_de_contenido', '==', 'video')
+    ->addLink('hero_link', [
+        'label' => 'Enlace de portada',
+        'instructions' => 'Las imágenes de la sección hero en portada serán enlaces hacia una página. Elige aquí la página que enlazan',
+        'return_format' => 'array',
+    ])
+        ->conditional('tipo_de_contenido', '==', 'imagen')
   ;
 
 return $options;
