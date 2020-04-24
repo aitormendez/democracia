@@ -15,7 +15,7 @@
       </a>
     </div>
 
-    <div class="logo col col-md-2 offset-md-2">
+    <div class="logo-footer col col-md-2 offset-md-2">
       @svg('logo-pos')
     </div>
   </div>
