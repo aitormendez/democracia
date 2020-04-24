@@ -15,6 +15,7 @@ import singleProject from './routes/single-project';
 import postTypeArchiveProject from './routes/archive-project';
 import taxProjectFormat from './routes/tax-project_format';
 import pageTemplateEdicion from './routes/page-template-edicion';
+import searchResults from './routes/search-results';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -30,6 +31,7 @@ const routes = new Router({
   singleStory,
   archive,
   pageTemplateEdicion,
+  searchResults,
 });
 
 // Load Events
