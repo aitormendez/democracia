@@ -42,8 +42,8 @@ import {
 } from '@fortawesome/fontawesome-svg-core';
 
 import {
-  faFacebook,
-  faTwitter,
+  faFacebookF,
+  faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
@@ -110,6 +110,6 @@ var faArrowRight = {
   ],
 }
 
-library.add(faFacebook, faTwitter, faArrowAltDown, faArrowAltRight, faCaretRight, faTimes, faCruz, faArrowRight);
+library.add(faFacebookF, faInstagram, faArrowAltDown, faArrowAltRight, faCaretRight, faTimes, faCruz, faArrowRight);
 
 dom.watch();

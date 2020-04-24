@@ -1,3 +1,28 @@
 .content-info {
-  height: 400px;
+  ul {
+    flex-direction: column;
+
+    li {
+      font-size: 0.8rem;
+    }
+  }
+
+  a {
+    color: theme-color("n");
+
+    &:hover,
+    &:focus {
+      color: theme-color("b");
+    }
+  }
+
+  .social {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    svg {
+      width: 100%;
+    }
+  }
 }
