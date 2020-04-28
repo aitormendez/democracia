@@ -1,18 +1,20 @@
 module.exports = {
     home: true,
-    title: 'Democracia. Manual de uso web',
+    title: 'Democracia. Manual del CMS',
+    base: '/democracia/',
     themeConfig: {
-        logo: '/logo-pos.png',
         nav: [
-            {text: 'Democracia', link: 'https://democracia.com.es'}
+            {text: 'Democracia', link: 'https://democracia.e451.net'}
         ],
         sidebar: [
             {
                 title: 'Contenido',
-                collapsable: false,
                 children: [
                 '/',
                 'front-page',
+                'imagenes',
+                'tipos-de-contenido',
+                'entradas',
                 ]
             },
         ]
