@@ -8,7 +8,7 @@ En lo que concierne al front-end, es decir, al aspecto de la página, podemos en
 
 ![Tipos de contenido en front-end](./img/tipos-cont-front.png)
 
-Sin embargo estos tipos de contenido no tienen una correlación directa con los tipos de contenido en en el back-end. Es decir, la estructura de la información en el back-end difiere ligeramente. Por ese motivo, el editor de WordPress muestra su propia estructura de tipos de contenido:
+Sin embargo, estos tipos de contenido no tienen una correlación directa con los tipos de contenido en en el back-end. Es decir, la estructura de la información en el back-end difiere ligeramente. Por ese motivo, el editor de WordPress muestra su propia estructura de tipos de contenido:
 
 ![Tipos de contenido en back-end](./img/tipos-cont-back.png)
 
