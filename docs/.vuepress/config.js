@@ -3,6 +3,7 @@ module.exports = {
     title: 'Democracia. Manual del CMS',
     base: '/democracia/',
     themeConfig: {
+        smoothScroll: true,
         nav: [
             {text: 'Democracia', link: 'https://democracia.e451.net'}
         ],
