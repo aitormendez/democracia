@@ -5,16 +5,18 @@ export default {
 
       // pintar de blanco el header del article desplegado
 
-      let desplegar = $('.btn-desplegar');
+      let botonesDesplegar = $('.btn-desplegar');
 
-      desplegar.click(function() {
-        desplegar.parents('article').removeClass('desplegado');
+      function desplegar() {
+        botonesDesplegar.parents('article').removeClass('desplegado');
         if ($(this).hasClass('collapsed')) {
           $(this).parents('article').addClass('desplegado');
         } else {
           $(this).parents('article').removeClass('desplegado');
         }
-      });
+      }
+
+      botonesDesplegar.click(desplegar);
 
     // infinite-scroll
     // -----------------------------------------------
@@ -35,15 +37,6 @@ export default {
     console.log('lc: ' + main.loadCount);
 
     function onPageLoad() {
-      desplegar = $('.btn-desplegar');
-      desplegar.click(function() {
-        desplegar.parents('article').removeClass('desplegado');
-        if ($(this).hasClass('collapsed')) {
-          $(this).parents('article').addClass('desplegado');
-        } else {
-          $(this).parents('article').removeClass('desplegado');
-        }
-      });
       if ( main.loadCount == 1 ) {
         main.options.loadOnScroll = false;
         buttonCont.removeClass('d-none');
@@ -52,7 +45,13 @@ export default {
       }
     }
 
+    function onAppend() {
+      botonesDesplegar = $('.btn-desplegar');
+      botonesDesplegar.click(desplegar);
+    }
+
     main.on( 'load', onPageLoad );
+    main.on( 'append', onAppend );
 
     main.on( 'last', function() {
       buttonCont.hide();
