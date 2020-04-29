@@ -13,12 +13,18 @@
     </div>
   @endif
   @if ($hero_tipo == 'imagen')
-    <div class="portrait justify-content-center align-items-center">
-      {!! $img_vert_portada  !!}
-    </div>
-    <div class="landscape justify-content-center align-items-center">
-      {!! $img_horiz_portada  !!}
-    </div>
+    @component('components.bg-image', [
+      'image' => $img_horiz_portada,
+      'class' => 'landscape',
+      'href' => $href,
+    ])
+    @endcomponent
+    @component('components.bg-image', [
+      'image' => $img_vert_portada,
+      'class' => 'portrait',
+      'href' => $href,
+    ])
+    @endcomponent
   @endif
 </section>
 
