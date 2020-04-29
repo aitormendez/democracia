@@ -145,6 +145,13 @@ add_action( 'init', function() {
     ],
   ];
 
+  $supports_project = [
+    'title',
+    'editor',
+    'thumbnail',
+    'excerpt',
+  ];
+
   $labels_project = [
     'name'                  => _x( 'Proyectos', 'Post Type General Name', 'dc-CPT' ),
   	'singular_name'         => _x( 'Proyecto', 'Post Type Singular Name', 'dc-CPT' ),
@@ -160,7 +167,7 @@ add_action( 'init', function() {
       'labels'       => $labels_project,
       'admin_cols'   => $cols_project,
       'admin_filters'=> $filters_project,
-      // 'supports'     => $supports_story,
+      'supports'     => $supports_project,
     ]
   );
 
