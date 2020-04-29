@@ -15,6 +15,7 @@ import singleProject from './routes/single-project';
 import postTypeArchiveProject from './routes/archive-project';
 import taxProjectFormat from './routes/tax-project_format';
 import pageTemplateEdicion from './routes/page-template-edicion';
+import pageTemplateElPerro from './routes/page-template-el-perro';
 import searchResults from './routes/search-results';
 
 /** Populate Router instance with DOM routes */
@@ -32,6 +33,7 @@ const routes = new Router({
   archive,
   pageTemplateEdicion,
   searchResults,
+  pageTemplateElPerro,
 });
 
 // Load Events

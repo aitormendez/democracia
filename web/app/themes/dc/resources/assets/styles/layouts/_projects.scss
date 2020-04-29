@@ -1,7 +1,8 @@
 /* stylelint-disable no-descending-specificity */
 
 .post-type-archive-project,
-.tax-project_format {
+.tax-project_format,
+.page-template-el-perro {
   article {
     background-color: theme-color("n");
     transition: background-color $trans;

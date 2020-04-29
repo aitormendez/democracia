@@ -34,8 +34,6 @@ export default {
       debug: true,
     });
 
-    console.log('lc: ' + main.loadCount);
-
     function onPageLoad() {
       if ( main.loadCount == 1 ) {
         main.options.loadOnScroll = false;

@@ -35,18 +35,19 @@
         <h2 class="caja">{{ $term->name }}</h2>
       </div>
     </div>
-        <div class="cont container-fluid">
-          <ul class="row">
-            @posts
-              <li class="caja">
-                  <h3 class="entry-title my-0">@title</h3>
-                  <div class="entry-content">
-                    @content
-                  </div>
-              </li>
-            @endposts
-          </ul>
-        </div>
+
+    <div class="cont container-fluid">
+      <ul class="row">
+        @posts
+          <li class="caja">
+              <h3 class="entry-title my-0">@title</h3>
+              <div class="entry-content">
+                @content
+              </div>
+          </li>
+        @endposts
+      </ul>
+    </div>
 
 
   @endforeach
