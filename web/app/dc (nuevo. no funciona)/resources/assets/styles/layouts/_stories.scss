@@ -1,0 +1,54 @@
+.post-type-archive-story {
+  a[role="article"] {
+    background-color: theme-color("b");
+
+    h2 {
+      color: theme-color("n");
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .fecha {
+      font-size: 0.8rem;
+      color: theme-color("g3");
+    }
+
+    .thumb {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .entry-summary {
+      color: theme-color("g3");
+      line-height: 1.2em;
+    }
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    @include media-breakpoint-up(md) {
+      header {
+        width: 66%;
+      }
+
+      .thumb {
+        width: 33%;
+        order: 2;
+      }
+
+      &.excerpt {
+        header {
+          width: 33%;
+        }
+
+        .entry-summary {
+          order: 1;
+          width: 33%;
+        }
+      }
+    }
+  }
+}

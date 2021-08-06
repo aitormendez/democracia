@@ -1,0 +1,85 @@
+.single {
+  header {
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+
+      .caja *:last-child {
+        margin-bottom: 0;
+      }
+
+      button {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        color: theme-color("r");
+
+        &:focus,
+        &:hover {
+          outline: none;
+          color: theme-color("n");
+        }
+      }
+    }
+  }
+
+  figcaption {
+    margin: 0;
+    padding: 0.5em;
+    background-color: theme-color("g2");
+    color: theme-color("b");
+    font-size: 0.8rem;
+  }
+
+  .entry-content .row {
+    h1,
+    h2,
+    h3 {
+      font-weight: 400;
+    }
+
+    .wp-block-image,
+    .wp-block-gallery,
+    .wp-block-embed {
+      @extend .mb-5;
+
+      &:not(:first-child) {
+        @extend .mt-5;
+      }
+    }
+
+    &> {
+      p,
+      ul,
+      ol,
+      blockquote,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        @extend .caja;
+
+        &:first-child {
+          margin-top: 2em;
+        }
+      }
+    }
+  }
+}
+
+.single-project {
+  .fecha {
+    font-weight: 700;
+  }
+}
+
+.single-story {
+  .entry-content {
+    padding-top: 2rem;
+  }
+}

@@ -1,0 +1,45 @@
+.post-type-archive-external {
+  article {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: theme-color("b");
+    margin-bottom: 2px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .entry-summary {
+      margin-top: 1rem;
+    }
+
+    @include media-breakpoint-up("md") {
+      padding-top: 0;
+      padding-bottom: 0;
+      width: 100%;
+
+      header {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        .grupo {
+          width: 51.9%;
+          padding-right: 6rem;
+
+          h2 {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+          }
+        }
+
+        img {
+          width: 30%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

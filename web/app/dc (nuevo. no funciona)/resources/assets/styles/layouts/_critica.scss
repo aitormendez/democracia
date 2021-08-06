@@ -1,0 +1,19 @@
+.page-template-critica .main {
+  .epi {
+    border-bottom: 1px dotted theme-color("n");
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}

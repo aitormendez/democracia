@@ -1,0 +1,34 @@
+html {
+  font-size: 1rem;
+
+  @include media-breakpoint-up(sm) {
+    font-size: calc(0.5vw + 0.7rem);
+  }
+}
+
+body.fijo {
+  overflow: hidden;
+}
+
+a {
+  color: theme-color("r");
+  transition: color $trans, background-color $trans;
+
+  &:hover {
+    color: theme-color("g3");
+    text-decoration: none;
+  }
+}
+
+.caja {
+  @extend .col-sm-8;
+  @extend .offset-sm-2;
+}
+
+.formatos {
+  line-height: 1em;
+
+  a {
+    font-size: 0.8rem;
+  }
+}
