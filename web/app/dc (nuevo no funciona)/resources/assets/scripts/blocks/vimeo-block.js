@@ -9,5 +9,3 @@ videos.each(function(){
     },
   });
 });
-
-

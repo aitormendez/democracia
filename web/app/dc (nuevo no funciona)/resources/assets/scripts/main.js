@@ -9,14 +9,14 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
-// import archive from './routes/archive';
-// import singleStory from './routes/single-story';
-// import singleProject from './routes/single-project';
-// import postTypeArchiveProject from './routes/archive-project';
-// import taxProjectFormat from './routes/tax-project_format';
-// import pageTemplateEdicion from './routes/page-template-edicion';
-// import pageTemplateElPerro from './routes/page-template-el-perro';
-// import searchResults from './routes/search-results';
+import archive from './routes/archive';
+import singleStory from './routes/single-story';
+import singleProject from './routes/single-project';
+import postTypeArchiveProject from './routes/archive-project';
+import taxProjectFormat from './routes/tax-project_format';
+import pageTemplateEdicion from './routes/page-template-edicion';
+import pageTemplateElPerro from './routes/page-template-el-perro';
+import searchResults from './routes/search-results';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -26,14 +26,14 @@ const routes = new Router({
   home,
   // About Us page, note the change from about-us to aboutUs.
   aboutUs,
-  // singleProject,
-  // postTypeArchiveProject,
-  // taxProjectFormat,
-  // singleStory,
-  // archive,
-  // pageTemplateEdicion,
-  // searchResults,
-  // pageTemplateElPerro,
+  singleProject,
+  postTypeArchiveProject,
+  taxProjectFormat,
+  singleStory,
+  archive,
+  pageTemplateEdicion,
+  searchResults,
+  pageTemplateElPerro,
 });
 
 // Load Events
