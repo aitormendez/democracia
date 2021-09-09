@@ -115,3 +115,35 @@ add_filter('get_the_archive_title', function ($title) {
     return preg_replace('/^(\w|\s)+: /', '', $title);
 });
 
+
+/**
+ * Ordenar proyectos por fecha de proyecto
+ * https://www.advancedcustomfields.com/resources/orde-posts-by-custom-fields/
+ */
+
+
+
+// add_action('pre_get_posts', function( $query ) {
+	
+// 	// do not modify queries in the admin
+// 	if( is_admin() ) {
+		
+// 		return $query;
+		
+// 	}
+	
+
+// 	// only modify queries for 'event' post type
+// 	if( isset($query->query_vars['post_type']) && $query->query_vars['post_type'] == 'event' ) {
+		
+// 		$query->set('orderby', 'meta_value');	
+// 		$query->set('meta_key', 'start_date');	 
+// 		$query->set('order', 'DESC'); 
+		
+// 	}
+	
+
+// 	// return
+// 	return $query;
+
+});
