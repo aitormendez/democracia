@@ -1,17 +1,18 @@
-{{--
-  Template Name: Contacto
---}}
+{{-- Template Name: Contacto --}}
 
 @extends('layouts.app')
 
 @section('content')
-  <div class="container-fluid bg-n">
-    <div class="row">
-      <div class="formulario caja d-flex justify-content-center align-items-center">
-        @while(have_posts()) @php the_post() @endphp
-          @include('partials.content-page')
-        @endwhile
-      </div>
+    <div class="container-fluid bg-n">
+        <div class="row">
+            <div class="formulario caja d-flex justify-content-center align-items-center">
+                @while (have_posts()) @php the_post() @endphp
+                    @include('partials.content-page')
+                @endwhile
+            </div>
+        </div>
+        @php
+            var_dump($_ENV['SATISPRESS_KEY']);
+        @endphp
     </div>
-  </div>
 @endsection
