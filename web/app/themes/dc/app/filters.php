@@ -123,27 +123,27 @@ add_filter('get_the_archive_title', function ($title) {
 
 
 
-// add_action('pre_get_posts', function( $query ) {
+add_action('pre_get_posts', function( $query ) {
 	
-// 	// do not modify queries in the admin
-// 	if( is_admin() ) {
+	// do not modify queries in the admin
+	if( is_admin() ) {
 		
-// 		return $query;
+		return $query;
 		
-// 	}
-	
-
-// 	// only modify queries for 'event' post type
-// 	if( isset($query->query_vars['post_type']) && $query->query_vars['post_type'] == 'event' ) {
-		
-// 		$query->set('orderby', 'meta_value');	
-// 		$query->set('meta_key', 'start_date');	 
-// 		$query->set('order', 'DESC'); 
-		
-// 	}
+	}
 	
 
-// 	// return
-// 	return $query;
+	// only modify queries for 'project' post type
+	if( isset($query->query_vars['post_type']) && $query->query_vars['post_type'] == 'project' ) {
+		
+		$query->set('orderby', 'meta_value');	
+		$query->set('meta_key', 'fecha_proyecto');	 
+		$query->set('order', 'DESC'); 
+		
+	}
+	
+
+	// return
+	return $query;
 
 });
